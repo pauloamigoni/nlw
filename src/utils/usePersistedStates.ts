@@ -8,17 +8,25 @@ type Response<T> = [
 function usePersisteState<T>(key: string, initialSate: T): Response<T> {
   const [state, setState] = useState(() => {
     
-    const storageValue = localStorage.getItem(key);
- 
-    if(storageValue){
+    if (typeof window !== 'undefined') {
+    const storageValue = window.localStorage.getItem(key);
+
+      if(storageValue){
         return JSON.parse(storageValue);
       }else{
         return initialSate;
       }
+    }else{
+      return initialSate;
+    }
+    
   });
 
   useEffect(() => {
-   localStorage.setItem(key, JSON.stringify(state));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(key, JSON.stringify(state));
+  }
+
   }, [key,state])
   return [state, setState]
 }

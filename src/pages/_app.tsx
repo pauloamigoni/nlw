@@ -1,8 +1,31 @@
+import React  from "react";
+import { ThemeProvider , DefaultTheme } from "styled-components";
+import usePersistedStates from "../utils/usePersistedStates";
+import light from "../styles/themes/light";
+import dark from "../styles/themes/dark";
+import Header from "../components/Header";
+import GlobalStyle from "../styles/theme";
 import '../styles/global.css';
 
 
+
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  const [theme, setTheme] = usePersistedStates<DefaultTheme>('theme',light);
+
+  const toggleTheme = () => {
+    setTheme(theme.title ==='light' ? dark : light);
+  }
+
+  return (
+   
+    <ThemeProvider theme={theme}>
+
+    <GlobalStyle />
+    <Component {...pageProps} />
+    <Header toggleTheme={toggleTheme}/>
+    </ThemeProvider>  
+ 
+  )
 }
 
 export default MyApp

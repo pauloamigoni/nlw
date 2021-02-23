@@ -25,5 +25,7 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],"file": [
+    "src/styles/styled.d.ts"
+  ] 
 }
