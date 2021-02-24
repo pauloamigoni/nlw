@@ -2,6 +2,8 @@ import { useState, useEffect, useContext } from 'react'
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Countdown.module.css'
 
+import {IoFitnessOutline} from 'react-icons/io5'
+
 
 
 let countdownTimeout: NodeJS.Timeout;
@@ -80,7 +82,7 @@ export function Countdown(){
                         className={styles.countdownButton}
                         onClick={startCountdown}
                         >
-                            Iniciar um Ciclo
+                            Iniciar um Ciclo  <IoFitnessOutline />
                         </button>
                     ) }
                 </>

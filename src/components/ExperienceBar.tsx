@@ -15,9 +15,20 @@ export function ExperienceBar(){
         <header className={styles.experienceBar}>
             <span>0 <ImStarEmpty /></span>
             <div>
-                <span className={styles.currentExperienceTop} style={{ left: `${percentToNextLevel}%` }}><CgGym size={28}/></span>
+                
+                <span className={styles.currentExperienceTop} 
+                style={{ left: `${percentToNextLevel}%` }}>
+                <CgGym size={28}/></span>
+                
+                
                 <div style={{ width: `${percentToNextLevel}%`}} />
-                <span className={styles.currentExperience} style={{ left: `${percentToNextLevel}%` }}>{currentExperience} <ImStarHalf /></span>
+                
+                
+                <span className={styles.currentExperience} 
+                style={{ left: `${percentToNextLevel}%` }}>
+                {currentExperience} <ImStarHalf /></span>
+
+
             </div>
             <span>{experienceToNextLevel} <ImStarFull /></span>
 
