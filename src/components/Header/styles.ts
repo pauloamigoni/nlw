@@ -6,10 +6,12 @@ export const Container = styled.div`
   color: '#FFF';
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 0 10px;
+  width: 8%;
+  padding: 10px 10px 10px 10px;
   position: absolute;
   bottom: 0;
-  left: 0;
-  height: 30px;
+  left: 1em;
+  height: 40px;
+  margin: 0 0 1em;
+  border-radius: 25px;
 `;
