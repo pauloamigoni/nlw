@@ -1,7 +1,8 @@
 import styles from '../styles/components/Profile.module.css';
-import Clock from '../lib/clock/clock';
+
 import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
+import Clock from './Clock';
 
 export function Profile() {
 
