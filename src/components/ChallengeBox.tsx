@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/ChallengeBox.module.css'
 
+
 export function ChallengeBox(){
 
     const {activeChallenge, resetChallenge } = useContext(ChallengesContext)
@@ -42,6 +43,7 @@ export function ChallengeBox(){
                </div>
            ) : (
                 <div className={styles.challengeNotActive}>
+                
                 <strong>Finalize um ciclo para receber desafios</strong>
                 <p>
                     <img src="icons/level-up.svg" alt="Level Up" />

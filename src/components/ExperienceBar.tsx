@@ -1,5 +1,6 @@
 import styles from '../styles/components/ExperienceBar.module.css';
 import { ImStarEmpty, ImStarFull, ImStarHalf } from 'react-icons/im';
+import { BiWalk} from 'react-icons/bi';
 import { CgGym } from 'react-icons/cg';
 import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
@@ -18,7 +19,7 @@ export function ExperienceBar(){
                 
                 <span className={styles.currentExperienceTop} 
                 style={{ left: `${percentToNextLevel}%` }}>
-                <CgGym size={28}/></span>
+                <BiWalk size={28}/></span>
                 
                 
                 <div style={{ width: `${percentToNextLevel}%`}} />

@@ -13,6 +13,12 @@
     text-align: center;
 }
 
+.challangeBoxContainer svg{
+    font-size: 5rem;
+    padding-bottom: 10px;
+    
+}
+
 .challengeNotActive{
     display: flex;
     flex-direction: column;
@@ -32,11 +38,11 @@
     align-items: center;
     line-height: 1.4;
     max-width: 70%;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 
 .challengeNotActive p img{
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 

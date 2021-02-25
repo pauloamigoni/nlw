@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Countdown.module.css'
 
-import {IoFitnessOutline} from 'react-icons/io5'
+import {IoFitnessOutline ,IoHeartDislikeOutline, IoHappyOutline} from 'react-icons/io5'
 
 
 
@@ -66,7 +66,7 @@ export function Countdown(){
                 className={styles.countdownButton}
                
                 >
-                    Ciclo Encerrado
+                    Ciclo Encerrado <IoHappyOutline />
                 </button>
             ) : (
                 <>
@@ -75,7 +75,7 @@ export function Countdown(){
                         className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
                         onClick={resetCountdown}
                         >
-                            Abandonar Ciclo
+                            Abandonar Ciclo <IoHeartDislikeOutline />
                         </button>
                     ) : (
                         <button type="button" 
