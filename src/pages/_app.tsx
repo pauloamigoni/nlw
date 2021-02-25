@@ -24,7 +24,8 @@ function MyApp({ Component, pageProps }) {
 
     <GlobalStyle />
             <ChallengesProvider>
-              <Component {...pageProps} />
+             
+                <Component {...pageProps} />
             </ChallengesProvider>
           <Header toggleTheme={toggleTheme}/>
     </ThemeProvider>  
