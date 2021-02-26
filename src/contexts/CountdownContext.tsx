@@ -26,9 +26,14 @@ export function CountdownProvider({ children}: CountdownProviderProps){
 
     const { startNewChallenge } = useContext(ChallengesContext);
  
+
+    const initValue = 0.01 * 60;
+    const finalValue = 100;
+    
     const [time, setTime] = useState(0.1 * 60);
     const [isActive, setIsActive] = useState(false);
     const [hasFinished, setHasFinished] = useState(false);
+
 
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
@@ -49,6 +54,8 @@ export function CountdownProvider({ children}: CountdownProviderProps){
         if(isActive && time > 0){
             countdownTimeout = setTimeout(() => {
                 setTime(time - 1);
+                console.log(Math.round(((finalValue / (time - 1)) * (time)) * 100 )) ;
+
             }, 1000);
         }else if (isActive && time === 0) {
             setHasFinished(true);

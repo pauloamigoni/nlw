@@ -7,6 +7,8 @@ import Header from "../components/Header";
 import GlobalStyle from "../styles/theme";
 import '../styles/global.css';
 
+
+
 import {ChallengesContext, ChallengesProvider} from '../contexts/ChallengesContext';
 
 
@@ -23,11 +25,11 @@ function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
 
     <GlobalStyle />
-            <ChallengesProvider>
+           
              
                 <Component {...pageProps} />
-            </ChallengesProvider>
-          <Header toggleTheme={toggleTheme}/>
+            
+          {/* <Header toggleTheme={toggleTheme}/> */}
     </ThemeProvider>  
  
   )

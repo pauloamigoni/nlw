@@ -15,7 +15,7 @@ const { level} = useContext(ChallengesContext);
             <div>
              <Clock />
                 <strong>Paulo Amigoni</strong>
-              
+            
                 <p>
                     <img src="icons/level.svg" alt="Level" />
                     Level {level}
